@@ -1,0 +1,167 @@
+    .highlight {
+      font-weight: bold;
+      display: inline-block;
+      background: #ffdd00;
+      color: #193549;
+      font-size: 100%;
+      padding: 4%;
+      border-radius: 999px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    .highlight:hover {
+      background: #193549;
+      color: #ffdd00;
+    }
+
+    #content1,
+    #content2,
+    #content3,
+    #content4,
+    #content5,
+    #content6{
+      position: absolute;
+      overflow: hidden;
+      padding-bottom: 1rem;
+      top: 5%;
+    }
+
+    #b1 {
+      left: 66%;
+      top: 52%;
+    }
+
+    #b2 {
+      left: 45%;
+      top: 52%;
+    }
+
+    #b3 {
+      left: 24%;
+      top: 52%;
+    }
+    #b4 {
+      left: 25%;
+      top: 15%;
+    }
+
+    #b5 {
+      left: 46%;
+      top: 15%;
+    }
+
+    #b6 {
+      left: 70%;
+      top: 15%;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .block {
+      display: block;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .text-s {
+      font-size: 1rem;
+    }
+
+    .text-m {
+      font-size: 2rem;
+    }
+
+    .leading-relaxed {
+      line-height: 1.625;
+    }
+
+    .text-grey {
+      color: #193549;
+    }
+
+    .text-blue {
+      color: #156bc1;
+    }
+
+    .text-left {
+      text-align: left;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .m-2 {
+      margin: 1rem;
+    }
+
+    .w-90 {
+      width: 100%;
+    }
+
+    .mw-1200 {
+      max-width: 60%;
+    }
+
+    .rounded {
+      border-radius: 4px;
+    }
+
+    .shadow {
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .bg-white {
+      background: #ffffff;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    body {
+      height: 100% !important;
+      margin: 5vh 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+
+    #hotspots1:checked~#content1,
+    #hotspots2:checked~#content2,
+    #hotspots3:checked~#content3,
+    #hotspots4:checked~#content4,
+    #hotspots5:checked~#content5,
+    #hotspots6:checked~#content6  {
+      display: block;
+      margin: 0rem;
+      width: 100%;
+    }
+.imagen-forma{
+  background-color: #156bc1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;  
+}
+    @supports (position: absolute) {
+      #hotspots-container {
+        display: block !important;
+        max-height: none !important;
+      }
+
+      #fallback {
+        display: none;
+      }
+    }

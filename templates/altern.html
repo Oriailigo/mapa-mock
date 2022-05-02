@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preload" href="{{url_for('static', filename = '/css/css.css')}}" as="style">
+  <link rel="stylesheet" href="{{url_for('static', filename = '/css/css.css')}}">
+  <link rel="preload" href="{{url_for('static', filename = '/css/visor.css')}}" as="style">
+  <link rel="stylesheet" href="{{url_for('static', filename = '/css/visor.css')}}">
+  <title>Hotspots</title>
+</head>
+
+<body>
+  {% block body %}
+  <!--[if !mso]><!-->
+  <div id="hotspots-container" class="hidden w-100 mw-1200 mx-auto rounded shadow text-center" style="position: relative;">
+    <img class="imagen-forma" src="{{url_for('static', filename = './img/recorridoHorizontal.webp')}}" alt=""  style=" position: absolute;">
+    <div style="padding-bottom: 40%; position: relative; overflow-y:scroll;" class="text-center">
+      <!-- estructura 1 -->
+      {% for i in sec %}
+      <input type="checkbox" class="hidden" id="hotspots{{loop.index}}">
+      <label for="hotspots{{loop.index}}" id="b{{loop.index}}" class="highlight absolute">
+        <p style="margin: 0 8px; padding: 0;" >{{loop.index}}</p></label>
+      {% endfor %}
+     
+         
+      {% for j in sec %}
+      <label id="content{{loop.index}}" for="hotspots{{loop.index}}" class="hidden bg-white rounded shadow text-grey text-left">
+        
+          <figure class='visor'>
+            <img src="{{url_for('static', filename = './img/s{{loop.index}}plano.jpg')}}" alt='imagen panoramica de la seccion{{loop.index}}' />
+            <figcaption>
+              <h2>{{j.donde}}</h2>
+              <p>{{j.lugar}} </p>
+            </figcaption>
+          </figure>
+        
+        <p class="m-2 text-m bold text-blue">Sección {{loop.index}}</p>
+        <p class="m-2 text-s leading-relaxed">{{j.descripcion}}</p>
+      </label>
+      {% endfor %}
+    </div>
+  </div>
+
+
+  <div id="fallback" class="text-center bold text-m">
+    Does not support hotspots!
+  </div>
+</body>
+{% endblock %}
+</html>
