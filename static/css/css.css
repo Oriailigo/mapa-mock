@@ -223,3 +223,7 @@
         display: none;
       }
     }
+
+    .altura_visor_img{
+      height: 30rem;
+    }
