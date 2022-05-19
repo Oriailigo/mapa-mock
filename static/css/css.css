@@ -15,36 +15,73 @@
       color: #ffdd00;
     }
 
-    #content1,
-    #content2,
-    #content3,
-    #content4,
-    #content5,
-    #content6{
+    #content1_1,
+    #content1_2,
+
+    #content2_1,
+
+    #content3_1,
+    #content3_2,
+    #content3_3,
+
+    #content4_1,
+    #content4_2,
+    #content4_3,
+
+    #content5_1,
+    #content5_2,
+    
+    #content6_1,
+    #content6_2
+    {
       position: absolute;
       overflow: hidden;
       padding-bottom: 1rem;
       top: 5%;
     }
 
-    #b1 {
+   
+    /* puntos de la seccion 1 */
+    #b1_1 {
+      left: 61%;
+      top: 24%;
+    }
+    #b1_2 {
+      left: 17%;
+      top: 61%;
+    }
+    /* puntos de la seccion 2 */
+    #b2_1 {
+      left: 46%;
+      top: 15%;
+    }
+
+    /* puntos de la seccion 3 */
+    #b3_1 {
+      left: 58%;
+      top: 58%;
+    }
+    #b3_2 {
       left: 52%;
       top: 52%;
     }
-/* puntos de la seccion 4 */
-    #b2 {
+    #b3_3 {
+      left: 26%;
+      top: 2%;
+    }
+    /* puntos de la seccion 4 */
+    #b4_1 {
       left: 14%;
       top: 49%;
     }
     #b4_2 {
-      left: 83%;
-      top: 17%;
+      left: 16%;
+      top: 53%;
     }
     #b4_3 {
-      left: 83%;
-      top: 49%;
+      left: 20%;
+      top: 56%;
     }
-
     /* puntos de la seccion 5 */
     #b5_1 {
       left: 33%;
@@ -62,25 +99,6 @@
     #b6_2 {
       left: 78%;
       top: 17%;
-    }
-    
-    #b3 {
-      left: 17%;
-      top: 61%;
-    }
-    #b4 {
-      left: 26%;
-      top: 2%;
-    }
-
-    #b5 {
-      left: 46%;
-      top: 15%;
-    }
-
-    #b6 {
-      left: 61%;
-      top: 24%;
     }
 
     .hidden {
@@ -165,12 +183,25 @@
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     }
 
-    #hotspots1:checked~#content1,
-    #hotspots2:checked~#content2,
-    #hotspots3:checked~#content3,
-    #hotspots4:checked~#content4,
-    #hotspots5:checked~#content5,
-    #hotspots6:checked~#content6  {
+    #hotspots1_1:checked~#content1_1,
+    #hotspots1_2:checked~#content1_2,
+
+    #hotspots2_1:checked~#content2_1,
+
+    #hotspots3_1:checked~#content3_1,
+    #hotspots3_2:checked~#content3_2,
+    #hotspots3_3:checked~#content3_3,
+
+    #hotspots4_1:checked~#content4_1,
+    #hotspots4_2:checked~#content4_2,
+    #hotspots4_3:checked~#content4_3,
+
+    #hotspots5_1:checked~#content5_1,
+    #hotspots5_2:checked~#content5_2,
+    
+    #hotspots6_1:checked~#content6_1,
+    #hotspots6_2:checked~#content6_2
+    {
       display: block;
       margin: 0rem;
       width: 100%;

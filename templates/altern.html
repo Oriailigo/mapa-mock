@@ -35,13 +35,13 @@
      
          
       {% for j in sec %}
-      {% if j.id == "1" %}
+      {% if j.id == "6" %}
       {% for k in j.puntos %}
       <label id="content{{k[0]}}" for="hotspots{{k[0]}}" class="hidden bg-white rounded shadow text-grey text-left">
         
           <figure class='visor'>
 
-            <img src="{{url_for('static', filename = './img/visor/s{{k[0]}}plano.jpg')}}" alt='imagen panoramica de la seccion{{k[0]}}' />
+            <img src='../static/img/visor/s{{k[0]}}plano.jpg' alt='imagen panoramica de la seccion{{k[0]}}' />
             
             <figcaption>
               <h2>{{j.donde}}</h2>
