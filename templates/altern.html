@@ -15,31 +15,47 @@
 <body>
   {% block body %}
   <!--[if !mso]><!-->
-  <div id="hotspots-container" class="hidden w-100 mw-1200 mx-auto rounded shadow text-center" style="position: relative;">
-    <img class="imagen-forma" src="{{url_for('static', filename = './img/recorridoHorizontal.webp')}}" alt=""  style=" position: absolute;">
-    <div style="padding-bottom: 40%; position: relative; overflow-y:scroll;" class="text-center">
-      <!-- estructura 1 -->
-      {% for i in sec %}
-      <input type="checkbox" class="hidden" id="hotspots{{loop.index}}">
-      <label for="hotspots{{loop.index}}" id="b{{loop.index}}" class="highlight absolute">
-        <p style="margin: 0 8px; padding: 0;" >{{loop.index}}</p></label>
+  
+  <div id="hotspots-container" class="hidden w-800 mw-2200 mx-auto rounded shadow text-center" style="position: relative;">
+    {% for i in sec %}
+    <!-- se debe cambiar el numero por lo que tire el valor del gps -->
+      {% if i.id == "6" %}
+          <img class="imagen-forma" src="{{url_for('static', filename = './img/mapas/seccion6.png')}}" alt=""  style=" position: absolute;">
+          <div style="padding-bottom: 40%; position: relative; overflow-y:scroll;" class="text-center">
+            <!-- estructura 1 -->
+          {% for h in i.puntos %}
+              <input type="checkbox" class="hidden" id="hotspots{{h[0]}}">
+              <label for="hotspots{{h[0]}}" id="b{{h[0]}}" class="highlight absolute">
+              <p style="margin: 0 8px; padding: 0;" >{{loop.index}}</p></label>
+          {% endfor %}
+      {% endif %}
+      
+        
       {% endfor %}
      
          
       {% for j in sec %}
-      <label id="content{{loop.index}}" for="hotspots{{loop.index}}" class="hidden bg-white rounded shadow text-grey text-left">
+      {% if j.id == "1" %}
+      {% for k in j.puntos %}
+      <label id="content{{k[0]}}" for="hotspots{{k[0]}}" class="hidden bg-white rounded shadow text-grey text-left">
         
           <figure class='visor'>
-            <img src="{{url_for('static', filename = './img/s{{loop.index}}plano.jpg')}}" alt='imagen panoramica de la seccion{{loop.index}}' />
+
+            <img src="{{url_for('static', filename = './img/visor/s{{k[0]}}plano.jpg')}}" alt='imagen panoramica de la seccion{{k[0]}}' />
+            
             <figcaption>
               <h2>{{j.donde}}</h2>
               <p>{{j.lugar}} </p>
             </figcaption>
           </figure>
         
-        <p class="m-2 text-m bold text-blue">Sección {{loop.index}}</p>
-        <p class="m-2 text-s leading-relaxed">{{j.descripcion}}</p>
+        <p class="m-2 text-m bold text-blue">Sección {{j.id}}</p>
+        
+        <p class="m-2 text-s leading-relaxed">{{k[1]}}</p>
+        
       </label>
+      {% endfor %}
+      {% endif %}
       {% endfor %}
     </div>
   </div>

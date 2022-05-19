@@ -1,9 +1,9 @@
     .highlight {
       font-weight: bold;
       display: inline-block;
-      background: #ffdd00;
+      background: #00ccff70;
       color: #193549;
-      font-size: 100%;
+      font-size: 20%;
       padding: 4%;
       border-radius: 999px;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -28,22 +28,49 @@
     }
 
     #b1 {
-      left: 66%;
+      left: 52%;
       top: 52%;
     }
-
+/* puntos de la seccion 4 */
     #b2 {
-      left: 45%;
-      top: 52%;
+      left: 14%;
+      top: 49%;
+    }
+    #b4_2 {
+      left: 83%;
+      top: 17%;
+    }
+    #b4_3 {
+      left: 83%;
+      top: 49%;
     }
 
+    /* puntos de la seccion 5 */
+    #b5_1 {
+      left: 33%;
+      top: 9%;
+    }
+    #b5_2 {
+      left: 78%;
+      top: 17%;
+    }
+    /* puntos de la seccion 6 */
+    #b6_1 {
+      left: 79%;
+      top: 48%;
+    }
+    #b6_2 {
+      left: 78%;
+      top: 17%;
+    }
+    
     #b3 {
-      left: 24%;
-      top: 52%;
+      left: 17%;
+      top: 61%;
     }
     #b4 {
-      left: 25%;
-      top: 15%;
+      left: 26%;
+      top: 2%;
     }
 
     #b5 {
@@ -52,8 +79,8 @@
     }
 
     #b6 {
-      left: 70%;
-      top: 15%;
+      left: 61%;
+      top: 24%;
     }
 
     .hidden {
