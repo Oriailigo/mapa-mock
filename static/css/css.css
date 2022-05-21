@@ -9,6 +9,19 @@
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
         0 2px 4px -1px rgba(0, 0, 0, 0.06);
     }
+    .icono_info{
+      width: 80%;
+      height: 80%;
+    }
+    @media (max-width: 768px) {
+      .highlight {
+        padding: 0%;
+      }
+      .icono_info{
+        width: 50%;
+        height: 50%;
+      }
+    }
 
     .highlight:hover {
       background: #193549;
@@ -37,7 +50,7 @@
       position: absolute;
       overflow: hidden;
       padding-bottom: 1rem;
-      top: 5%;
+      /* top: 5%; */
     }
 
    
@@ -48,58 +61,55 @@
     }
     #b1_2 {
       left: 17%;
-      top: 61%;
+      top: 33%;
     }
     /* puntos de la seccion 2 */
     #b2_1 {
-      left: 46%;
+      left: 29%;
       top: 15%;
     }
 
     /* puntos de la seccion 3 */
     #b3_1 {
-      left: 58%;
-      top: 58%;
+      left: 3%;
+      top: 55%;
     }
     #b3_2 {
-      left: 52%;
-      top: 52%;
+      left: 39%;
+      top: 42%;
     }
     #b3_3 {
-      left: 26%;
-      top: 2%;
+      left: 69%;
+      top: 21%;
     }
     /* puntos de la seccion 4 */
     #b4_1 {
-      left: 14%;
+      left: 65%;
       top: 49%;
     }
     #b4_2 {
-      left: 16%;
+      left: 11%;
       top: 53%;
     }
     #b4_3 {
-      left: 20%;
-      top: 56%;
+      left: 30%;
+      top: 17%;
     }
     /* puntos de la seccion 5 */
     #b5_1 {
-      left: 33%;
-      top: 9%;
+      left: 62%;
+      top: 59%;
     }
     #b5_2 {
-      left: 78%;
-      top: 17%;
+      left: 22%;
+      top: 58%;
     }
     /* puntos de la seccion 6 */
     #b6_1 {
-      left: 79%;
-      top: 48%;
+      left: 31%;
+      top: 42%;
     }
-    #b6_2 {
-      left: 78%;
-      top: 17%;
-    }
+   
 
     .hidden {
       display: none;
@@ -206,6 +216,33 @@
       margin: 0rem;
       width: 100%;
     }
+
+    @media (max-width: 990px) {
+      #hotspots1_1:checked~#content1_1,
+    #hotspots1_2:checked~#content1_2,
+
+    #hotspots2_1:checked~#content2_1,
+
+    #hotspots3_1:checked~#content3_1,
+    #hotspots3_2:checked~#content3_2,
+    #hotspots3_3:checked~#content3_3,
+
+    #hotspots4_1:checked~#content4_1,
+    #hotspots4_2:checked~#content4_2,
+    #hotspots4_3:checked~#content4_3,
+
+    #hotspots5_1:checked~#content5_1,
+    #hotspots5_2:checked~#content5_2,
+    
+    #hotspots6_1:checked~#content6_1,
+    #hotspots6_2:checked~#content6_2
+    {
+      display: block;
+      margin: 0rem;
+      width: 100%;
+      height: 100%;
+    }
+    }
 .imagen-forma{
   background-color: #156bc1;
   width: 100%;
@@ -213,9 +250,19 @@
   top: 0;
   left: 0;  
 }
+
+.altura_cont{
+  padding-bottom: 40%; position: relative; overflow-y:scroll;
+}
+
+@media (max-width: 768px) {
+  .altura_cont{
+    padding-bottom: 100%;
+  }
+}
     @supports (position: absolute) {
       #hotspots-container {
-        display: block !important;
+        display: contents !important;
         max-height: none !important;
       }
 
@@ -226,4 +273,11 @@
 
     .altura_visor_img{
       height: 30rem;
+    }
+
+    @media (max-width: 958px) {
+      .altura_visor_img{
+        height: 21rem;
+      }
+      
     }

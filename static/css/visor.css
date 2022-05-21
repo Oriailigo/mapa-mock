@@ -31,6 +31,8 @@ figcaption {
   width: 100%;
   text-align: center;
   color: #6495ED;
+  color: #6495ED;
+    background: aliceblue;
 }
 h2 {
   font-size: 2rem;

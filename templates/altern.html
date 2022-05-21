@@ -20,13 +20,13 @@
     {% for i in sec %}
     <!-- se debe cambiar el numero por lo que tire el valor del gps -->
       {% if i.id == "1" %}
-          <img class="imagen-forma" src="{{url_for('static', filename = './img/mapas/seccion1.png')}}" alt=""  style=" position: absolute;">
-          <div style="padding-bottom: 40%; position: relative; overflow-y:scroll;" class="text-center">
+          <img class="imagen-forma" src="{{url_for('static', filename = './img/mapas/s1.png')}}" alt=""  style=" position: absolute;">
+          <div class="text-center altura_cont">
             <!-- estructura 1 -->
           {% for h in i.puntos %}
               <input type="checkbox" class="hidden" id="hotspots{{h[0]}}">
               <label for="hotspots{{h[0]}}" id="b{{h[0]}}" class="highlight absolute">
-              <img src="{{url_for('static', filename = './img/infog.png')}}" alt=""> </label>
+              <img class="icono_info" src="{{url_for('static', filename = './img/infog.png')}}" alt=""> </label>
           {% endfor %}
       {% endif %}
       
