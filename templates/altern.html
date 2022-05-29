@@ -5,10 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="preload" href="{{url_for('static', filename = '/css/css.css')}}" as="style">
-  <link rel="stylesheet" href="{{url_for('static', filename = '/css/css.css')}}">
-  <link rel="preload" href="{{url_for('static', filename = '/css/visor.css')}}" as="style">
-  <link rel="stylesheet" href="{{url_for('static', filename = '/css/visor.css')}}">
+  <link rel="preload" href="{{url_for('static', filename = '/css/main.min.css')}}" as="style">
+  <link rel="stylesheet" href="{{url_for('static', filename = '/css/main.min.css')}}">
   <title>Hotspots</title>
 </head>
 
@@ -20,7 +18,7 @@
     {% for i in sec %}
     <!-- se debe cambiar el numero por lo que tire el valor del gps -->
       {% if i.id == "1" %}
-          <img class="imagen-forma" src="{{url_for('static', filename = './img/mapas/s1.png')}}" alt=""  style=" position: absolute;">
+          <img class="imagen-forma" src="{{url_for('static', filename = './img/mapas/s1.webp')}}" alt=""  style=" position: absolute;">
           <div class="text-center altura_cont">
             <!-- estructura 1 -->
           {% for h in i.puntos %}
@@ -38,28 +36,21 @@
       {% if j.id == "1" %}
       {% for k in j.puntos %}
       <label id="content{{k[0]}}" for="hotspots{{k[0]}}" class="hidden bg-white rounded shadow text-grey text-left">
-        
-          <figure class='visor'>
-
-            <img class="altura_visor_img" src='../static/img/visor/s{{k[0]}}plano.jpg' alt='imagen panoramica de la seccion{{k[0]}}' />
-            
-            <figcaption>
-              <h2>{{j.donde}}</h2>
-              <p>{{j.lugar}} </p>
-            </figcaption>
-          </figure>
-        
+        <figure class='visor'>
+          <img class="altura_visor_img" src='../static/img/visor/s{{k[0]}}plano.webp' alt='imagen panoramica de la seccion{{k[0]}}' />
+          <figcaption>
+            <h2>{{j.donde}}</h2>
+            <p>{{j.lugar}} </p>
+          </figcaption>
+        </figure>
         <p class="m-2 text-m bold text-blue">Sección {{j.id}}</p>
-        
         <p class="m-2 text-s leading-relaxed">{{k[1]}}</p>
-        
       </label>
       {% endfor %}
       {% endif %}
       {% endfor %}
     </div>
   </div>
-
 
   <div id="fallback" class="text-center bold text-m">
     Does not support hotspots!
