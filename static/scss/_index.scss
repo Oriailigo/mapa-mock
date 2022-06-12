@@ -264,12 +264,12 @@
   .altura_cont{
     padding-bottom: 40%;
   }
-  #b5_1 {
-  top: 82px;
-  }
-  #b5_2 {
-    top: 81px;
-    }
+  // #b5_1 {
+  // top: 82px;
+  // }
+  // #b5_2 {
+  //   top: 81px;
+  //   }
 }
   @supports (position: absolute) {
     #hotspots-container {
@@ -288,7 +288,7 @@
 
   @media (max-width: 958px) {
     .altura_visor_img{
-      height: 21rem;
+      height: 15rem;
     }
     
   }
