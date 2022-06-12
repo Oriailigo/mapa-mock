@@ -18,7 +18,7 @@
     {% for i in sec %}
     <!-- se debe cambiar el numero por lo que tire el valor del gps -->
       {% if i.id == "5" %}
-          <img class="imagen-forma" src="{{url_for('static', filename = './img/mapas/s5.png')}}" alt=""  style=" position: absolute;">
+          <img class="imagen-forma" src="{{url_for('static', filename = './img/mapas/s5.webp')}}" alt=""  style=" position: absolute;">
           <div class="text-center altura_cont">
             <!-- estructura 1 -->
           {% for h in i.puntos %}
@@ -39,7 +39,7 @@
         
           <figure class='visor'>
 
-            <img class="altura_visor_img" src='../static/img/visor/s{{k[0]}}plano.jpg' alt='imagen panoramica del Stand{{k[0]}}' />
+            <img class="altura_visor_img" src='../static/img/visor/s{{k[0]}}plano.webp' alt='imagen panoramica del Stand{{k[0]}}' />
             
             <figcaption>
               <h2>{{j.donde}}</h2>
