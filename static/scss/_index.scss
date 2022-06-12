@@ -255,16 +255,21 @@
 }
 
 .altura_cont{
-  // padding-bottom: 100%; 
-  padding-bottom: 30rem;
   position: relative; 
   overflow-y:scroll;
+  padding-bottom: 100%;
 }
 
 @media (min-width: 768px) {
   .altura_cont{
     padding-bottom: 40%;
   }
+  #b5_1 {
+  top: 82px;
+  }
+  #b5_2 {
+    top: 81px;
+    }
 }
   @supports (position: absolute) {
     #hotspots-container {
