@@ -1,7 +1,7 @@
 seccion=[{
         "id":"1",
         "puntos":[["1_1","Conocé 4 casos testimoniales impactantes."],["1_2","Conocé las noticias de la inundación en la TV en ese momento."]],
-        "donde": "Estás en la sección 1 de 6",
+        "donde": "Estás en la sección 6 de 6",
         "lugar": "República de los niños", 
           
         },
