@@ -19,8 +19,8 @@
   <div id="hotspots-container" class="hidden w-800 mw-2200 mx-auto rounded shadow text-center" style="position: relative;">
     {% for i in sec %}
     <!-- se debe cambiar el numero por lo que tire el valor del gps -->
-      {% if i.id == "1" %}
-          <img class="imagen-forma" src="{{url_for('static', filename = './img/mapas/s1.png')}}" alt=""  style=" position: absolute;">
+      {% if i.id == "5" %}
+          <img class="imagen-forma" src="{{url_for('static', filename = './img/mapas/s5.png')}}" alt=""  style=" position: absolute;">
           <div class="text-center altura_cont">
             <!-- estructura 1 -->
           {% for h in i.puntos %}
@@ -35,7 +35,7 @@
      
          
       {% for j in sec %}
-      {% if j.id == "1" %}
+      {% if j.id == "5" %}
       {% for k in j.puntos %}
       <label id="content{{k[0]}}" for="hotspots{{k[0]}}" class="hidden bg-white rounded shadow text-grey text-left">
         
