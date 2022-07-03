@@ -30,6 +30,11 @@ compress.init_app(app)
 
 @app.route('/')
 def Index():
+    
     return rutas.render_index()
 ###########################
 ###########################
+@app.route('/altern/<int:id>')
+def Altern(id):
+    print(id)
+    return rutas.render_altern(id)

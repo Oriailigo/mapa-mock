@@ -280,6 +280,7 @@ h1{
     #hotspots-container {
       display: contents !important;
       max-height: none !important;
+      background-color: #ffdd00 !important;
     }
 
     #fallback {
@@ -297,3 +298,10 @@ h1{
     }
     
   }
+
+// PROBANDO CLASES PARA INNER HTML SWAL
+  .error-list{
+    color: #ffdd00;
+    background-color: #156bc1;
+  }
+  

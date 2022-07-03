@@ -14,47 +14,7 @@
   {% block body %}
   <!--[if !mso]><!-->
   
-  <div id="hotspots-container" class="hidden w-800 mw-2200 mx-auto rounded shadow text-center" style="position: relative;">
-    {% for i in sec %}
-    <!-- se debe cambiar el numero por lo que tire el valor del gps -->
-      {% if i.id == "5" %}
-          <img class="imagen-forma" src="{{url_for('static', filename = './img/mapas/s5.webp')}}" alt=""  style=" position: absolute;">
-          <div class="text-center altura_cont">
-            <!-- estructura 1 -->
-          {% for h in i.puntos %}
-              <input type="checkbox" class="hidden" id="hotspots{{h[0]}}">
-              <label for="hotspots{{h[0]}}" id="b{{h[0]}}" class="highlight absolute">
-              <img class="icono_info" src="{{url_for('static', filename = './img/infog.png')}}" alt=""> </label>
-          {% endfor %}
-      {% endif %}
-      
-        
-      {% endfor %}
-     
-         
-      {% for j in sec %}
-      {% if j.id == "5" %}
-      {% for k in j.puntos %}
-      <label id="content{{k[0]}}" for="hotspots{{k[0]}}" class="hidden bg-white rounded shadow text-grey text-left">
-        
-          <figure class='visor'>
-
-            <img class="altura_visor_img" src='../static/img/visor/s{{k[0]}}plano.webp' alt='imagen panoramica del Stand{{k[0]}}' />
-            
-            <figcaption>
-              <h1>{{k[2]}}</h1>
-              <!-- <p>{{j.lugar}} </p> -->
-            </figcaption>
-          </figure>
-        
-        <!-- <p class="m-2 text-m bold text-blue">Stand {{j.id}}</p> -->
-        <p class="m-2 text-s leading-relaxed">{{k[1]}}</p>
-      </label>
-      {% endfor %}
-      {% endif %}
-      {% endfor %}
-    </div>
-  </div>
+  
 
 </body>
 {% endblock %}
