@@ -263,9 +263,16 @@ h1{
   padding-bottom: 100%;
 }
 
+@media (max-width: 768px) {
+  .altura_cont{
+    padding-bottom: 130%;
+    overflow-y:hidden;
+  }
+}
 @media (min-width: 768px) {
   .altura_cont{
     padding-bottom: 40%;
+    overflow-y:hidden;
   }
   // #b5_1 {
   // top: 82px;
